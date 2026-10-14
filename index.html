@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TrustGuard AI investigates suspicious digital communications using evidence-based risk assessment.">
+    <title>TrustGuard AI | Digital Trust Intelligence</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="brand">
+            <span class="brand-icon">T</span>
+            <span>TrustGuard <span class="brand-ai">AI</span></span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#analyzer">Analyzer</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <div class="system-status">
+            <span class="status-dot"></span>
+            Prototype
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="home">
+            <div class="eyebrow">
+                <span>✦</span> AI-POWERED DIGITAL TRUST
+            </div>
+
+            <h1>Don't just trust.<br>
+                <span>Investigate the evidence.</span>
+            </h1>
+
+            <p class="hero-description">
+                Analyze suspicious messages and digital communications.
+                Identify warning signs, understand the evidence, and
+                assess risk without jumping to conclusions.
+            </p>
+
+            <a href="#analyzer" class="primary-button">
+                Analyze a Message <span>→</span>
+            </a>
+
+            <div class="hero-note">
+                <span>🛡</span>
+                Evidence-led analysis · Uncertainty-aware assessment
+            </div>
+        </section>
+
+        <section class="analyzer-section" id="analyzer">
+            <div class="section-heading">
+                <div>
+                    <p class="section-label">INVESTIGATION WORKSPACE</p>
+                    <h2>Analyze a communication</h2>
+                    <p>Paste a suspicious email, SMS, or message below.</p>
+                </div>
+                <div class="workspace-tag">TEXT ANALYSIS</div>
+            </div>
+
+            <div class="analyzer-grid">
+                <div class="input-card">
+                    <label for="messageInput">MESSAGE CONTENT</label>
+
+                    <textarea
+                        id="messageInput"
+                        placeholder="Paste the suspicious message here...
+
+Example: URGENT! Your account will be blocked. Verify your account immediately and share your OTP."
+                        maxlength="10000"
+                    ></textarea>
+
+                    <div class="input-footer">
+                        <span id="charCount">0 / 10000 characters</span>
+                        <button id="clearButton" class="text-button" type="button">
+                            Clear text
+                        </button>
+                    </div>
+
+                    <button id="analyzeButton" class="analyze-button" type="button">
+                        <span>⌕</span> Investigate Message
+                    </button>
+
+                    <p class="privacy-note">
+                        Your message is submitted for analysis to the configured
+                        backend. Do not paste passwords, OTPs, or private information.
+                    </p>
+                </div>
+
+                <div class="result-card" id="results">
+                    <div class="result-header">
+                        <div>
+                            <p class="section-label">ANALYSIS REPORT</p>
+                            <h3>Investigation results</h3>
+                        </div>
+                        <span class="report-icon">✳</span>
+                    </div>
+
+                    <div id="emptyState" class="empty-state">
+                        <div class="empty-icon">⌕</div>
+                        <h4>Awaiting evidence</h4>
+                        <p>
+                            Submit a message to view detected indicators
+                            and the preliminary assessment.
+                        </p>
+                    </div>
+
+                    <div id="loadingState" class="loading-state" hidden>
+                        <div class="loader"></div>
+                        <p>Investigating message...</p>
+                    </div>
+
+                    <div id="errorState" class="error-state" hidden>
+                        <h4>Analysis unavailable</h4>
+                        <p id="errorMessage">
+                            Unable to connect to the analysis service.
+                        </p>
+                    </div>
+
+                    <div id="resultContent" hidden>
+                        <div class="assessment-box">
+                            <span class="result-label">PRELIMINARY ASSESSMENT</span>
+                            <h4 id="assessmentText">Inconclusive</h4>
+                            <p id="assessmentDescription"></p>
+                        </div>
+
+                        <div class="metrics">
+                            <div class="metric">
+                                <span class="metric-label">INDICATORS</span>
+                                <strong id="indicatorCount">0</strong>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-label">EVIDENCE STATUS</span>
+                                <strong id="evidenceStatus">Pending</strong>
+                            </div>
+                        </div>
+
+                        <div class="evidence-heading">
+                            <h4>Evidence indicators</h4>
+                            <span id="evidenceBadge">0 found</span>
+                        </div>
+
+                        <ul id="evidenceList" class="evidence-list"></ul>
+
+                        <p id="disclaimer" class="disclaimer"></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section" id="about">
+            <p class="section-label">OUR APPROACH</p>
+            <h2>Evidence before conclusions.</h2>
+
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">⌕</div>
+                    <h3>Artifact-first analysis</h3>
+                    <p>Start with the message or digital artifact provided for investigation.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">⛓</div>
+                    <h3>Evidence-based reasoning</h3>
+                    <p>Present observable warning signs and explain why they matter.</p>
+                </article>
+
+                <article class="feature-card">
+                    <div class="feature-icon">◉</div>
+                    <h3>Uncertainty awareness</h3>
+                    <p>Recognize when available evidence is insufficient for a reliable conclusion.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <a href="#home" class="brand footer-brand">
+            <span class="brand-icon">T</span>
+            <span>TrustGuard <span class="brand-ai">AI</span></span>
+        </a>
+        <p>Research prototype · Not a definitive fraud detector</p>
+        <p>© 2026 TrustGuard AI</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
